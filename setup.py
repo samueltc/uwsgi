@@ -8,6 +8,8 @@ from setuptools.command.install import install
 from setuptools.command.install_lib import install_lib
 from setuptools.command.build_ext import build_ext
 
+os.environ['CFLAGS'] = '-DUWSGI_DEBUG'
+
 try:
     from wheel.bdist_wheel import bdist_wheel
     HAS_WHEEL = True
